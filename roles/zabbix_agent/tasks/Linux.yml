@@ -120,6 +120,7 @@
     dest: "/etc/zabbix/zabbix_agent{{ (zabbix_agent2 | bool) | ternary('2', 'd') }}.conf"
     owner: root
     group: root
+    backup: true
     mode: "{{ zabbix_agent_conf_mode }}"
   notify:
     - restart zabbix-agent
