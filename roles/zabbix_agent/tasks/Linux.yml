@@ -137,6 +137,7 @@
     group: zabbix
     mode: "{{ zabbix_agent_include_mode }}"
     state: directory
+  when: zabbix_agent_include
   become: true
   tags:
     - config
